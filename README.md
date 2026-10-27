@@ -156,20 +156,15 @@ el CSV incluido.
 ## Repositorio y publicación en GitHub
 
 El nombre requerido es **`parcial2-ia-grupo10`** y la visibilidad debe ser pública.
-El historial local de esta carpeta independiente tiene tres commits de avance. El
-intento de crear/publicar el repositorio desde este entorno no pudo completarse
-porque GitHub solicita iniciar sesión y aquí no hay una sesión autenticada. Por eso
-el repositorio remoto y la entrega del enlace en AVACO siguen pendientes; no afirmo
-que estén publicados.
-
-Para terminar la publicación, inicia sesión en GitHub, crea un repositorio público
-vacío llamado `parcial2-ia-grupo10` bajo la cuenta `piresvanessa08` y, desde esta
-carpeta, publica la rama `main`:
+El repositorio público ya está publicado bajo la cuenta `piresvanessa08`:
+[github.com/piresvanessa08/parcial2-ia-grupo10](https://github.com/piresvanessa08/parcial2-ia-grupo10).
+La rama `main` contiene los avances del parcial, con más de los tres commits
+requeridos.
 
 ```bash
-git push -u origin main
+git log --oneline -4
 ```
 
-El remoto `origin` ya apunta a `https://github.com/piresvanessa08/parcial2-ia-grupo10.git`.
-Comprueba los tres commits con `git log --oneline -3`, verifica en GitHub que el
-repositorio sea público y entrega su enlace en AVACO.
+El directorio `parcial2` es un repositorio Git independiente del repositorio del
+curso. Para reproducir las entregas futuras, usa esta carpeta como directorio de
+trabajo. La entrega del enlace del repositorio en AVACO queda a cargo del estudiante.
