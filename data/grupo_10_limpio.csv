@@ -1,0 +1,81 @@
+cliente_id,barrio,visitas_mes,ticket_promedio_miles,cliente_recurrente
+K001,El Prado,19,160,1
+K002,Guadalupe,10,279,1
+K003,Zaragoza,14,48,0
+K004,El Prado,10,289,0
+K005,Guadalupe,5,78,0
+K006,Santa Ana,18,254,1
+K007,Guadalupe,1,121,0
+K008,Zaragoza,14,80,0
+K009,Guadalupe,10,27,0
+K010,Centro,9,94,0
+K011,Centro,10,38,0
+K012,El Prado,5,190,0
+K013,Zaragoza,1,188,0
+K014,Guadalupe,13,83,0
+K015,El Prado,10,261,1
+K016,Zaragoza,13,159,1
+K017,Guadalupe,9,227,0
+K018,El Prado,14,251,1
+K019,Santa Ana,14,44,0
+K020,El Prado,8,95,0
+K021,Guadalupe,17,81,0
+K022,Zaragoza,17,280,1
+K023,Guadalupe,9,256,0
+K024,Zaragoza,16,47,1
+K025,Santa Ana,8,35,0
+K026,Centro,12,72,0
+K027,Santa Ana,10,33,0
+K028,Zaragoza,16,63,0
+K029,Centro,14,265,1
+K030,Santa Ana,19,107,1
+K031,Santa Ana,7,284,1
+K032,Guadalupe,4,117,0
+K033,Centro,1,32,0
+K034,Centro,17,278,1
+K035,Centro,7,272,1
+K036,Santa Ana,8,294,1
+K037,Guadalupe,7,295,1
+K038,Guadalupe,11,295,1
+K039,Centro,17,97,1
+K040,Centro,6,46,0
+K041,Centro,14,12,0
+K042,Centro,19,282,1
+K043,El Prado,18,272,1
+K044,El Prado,4,90,0
+K045,Zaragoza,6,132,0
+K046,El Prado,10,263,1
+K047,Santa Ana,13,137,0
+K048,El Prado,3,125,0
+K049,Santa Ana,10,213,0
+K050,El Prado,19,95,1
+K051,El Prado,14,177,1
+K052,Guadalupe,16,263,1
+K053,El Prado,18,194,1
+K054,Santa Ana,16,133,0
+K055,Guadalupe,19,127,1
+K056,Zaragoza,13,157,0
+K057,Santa Ana,19,144,1
+K058,Zaragoza,8,191,0
+K059,El Prado,14,250,1
+K060,Santa Ana,3,37,0
+K061,Guadalupe,19,268,1
+K062,El Prado,12,133,0
+K063,Zaragoza,19,144,1
+K064,Centro,9,28,0
+K065,Zaragoza,10,251,1
+K066,Santa Ana,11,90,0
+K067,Zaragoza,8,61,0
+K068,Centro,13,288,1
+K069,El Prado,7,248,1
+K070,Santa Ana,2,225,0
+K071,Centro,5,80,0
+K072,El Prado,13,181,0
+K073,El Prado,10,144,0
+K074,Zaragoza,1,48,0
+K075,Guadalupe,3,299,0
+K076,Centro,15,245,1
+K077,Zaragoza,4,174,0
+K078,El Prado,5,60,0
+K079,Zaragoza,9,34,0
+K080,Zaragoza,1,94,0
