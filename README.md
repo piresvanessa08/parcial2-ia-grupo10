@@ -14,19 +14,24 @@ pero el perceptrón usa únicamente `visitas_mes` y `ticket_promedio_miles`.
 Requisitos: Docker con Docker Compose. La imagen usa Python 3.12 e instala NumPy,
 Pandas, Matplotlib y Seaborn desde `requirements.txt`.
 
-Desde esta carpeta (`CursoIA/parcial2`):
+### Reproducir desde WSL2 (Ubuntu)
+
+Abre Ubuntu en WSL2 y, desde la carpeta del curso, clona el repositorio si aún no
+está allí. Si ya tienes el proyecto, entra a su carpeta:
+
+```bash
+mkdir -p ~/CursoIA
+cd ~/CursoIA
+git clone https://github.com/piresvanessa08/parcial2-ia-grupo10.git parcial2
+cd parcial2
+```
+
+Si el repositorio ya existe en `~/CursoIA/parcial2`, omite `git clone` y ejecuta
+`cd ~/CursoIA/parcial2`. Luego construye el contenedor y reproduce todo el análisis:
 
 ```bash
 docker compose up -d --build
-docker compose exec parcial2 bash
-```
-
-Dentro del contenedor, reproduce la inspección, limpieza, visualizaciones y
-entrenamiento:
-
-```bash
-python src/parcial2.py
-exit
+docker compose exec parcial2 python src/parcial2.py
 ```
 
 El montaje del proyecto hace que el CSV limpio y los gráficos generados queden
