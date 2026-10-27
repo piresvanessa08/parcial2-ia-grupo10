@@ -99,6 +99,15 @@ def clean_data(raw: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, object]]:
         "Tickets > 1000 miles de pesos: "
         f"{outliers[['cliente_id', 'ticket_promedio_miles']].to_dict('records')}"
     )
+    tickets_without_outliers = clients.loc[
+        ~clients.index.isin(outliers.index), "ticket_promedio_miles"
+    ]
+    print(
+        "Resumen de los demás tickets (mínimo, mediana, máximo): "
+        f"{tickets_without_outliers.min():g}, "
+        f"{tickets_without_outliers.median():g}, "
+        f"{tickets_without_outliers.max():g}"
+    )
     suspicious_mean_before = float(clients["ticket_promedio_miles"].mean())
     corrections = {"K058": (191000.0, 191.0)}
     for customer_id, (observed, corrected) in corrections.items():
@@ -168,19 +177,23 @@ def create_eda_plots(data: pd.DataFrame) -> None:
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     sns.set_theme(style="whitegrid")
 
+    plot_data = data.assign(
+        tipo_cliente=data[TARGET].map({0: "Ocasional (0)", 1: "Recurrente (1)"})
+    )
     plt.figure(figsize=(9, 6))
     sns.scatterplot(
-        data=data,
+        data=plot_data,
         x=FEATURES[0],
         y=FEATURES[1],
-        hue=TARGET,
-        palette={0: "#4472C4", 1: "#E67E22"},
+        hue="tipo_cliente",
+        hue_order=["Ocasional (0)", "Recurrente (1)"],
+        palette={"Ocasional (0)": "#4472C4", "Recurrente (1)": "#E67E22"},
         s=75,
     )
     plt.title("Visitas y ticket promedio por tipo de cliente")
     plt.xlabel("Visitas al mes")
     plt.ylabel("Ticket promedio (miles de pesos)")
-    plt.legend(title="Cliente recurrente", labels=["Ocasional (0)", "Recurrente (1)"])
+    plt.legend(title="Cliente recurrente")
     plt.tight_layout()
     plt.savefig(FIGURES_DIR / "dispersion_clientes.png", dpi=160)
     plt.close()

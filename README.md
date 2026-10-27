@@ -88,11 +88,14 @@ filas de entrenamiento y se imprimen para poder reproducir el resultado.
 El script guarda gráficos legibles, con título y ejes etiquetados, en `graficos/`:
 
 - `dispersion_clientes.png`: visitas al mes frente a ticket promedio, con color por
-  clase. Permite observar solapamientos y patrones de asociación entre las entradas
-  y la recurrencia; no prueba que una variable cause la otra.
+  clase (azul = ocasional, naranja = recurrente). En estos datos, la clase recurrente
+  tiene medianas mayores de visitas y ticket (15 y 254) que la ocasional (9 y 90),
+  aunque hay solapamiento entre clases. Es una asociación descriptiva, no evidencia
+  que una variable cause la otra.
 - `boxplot_visitas_clase.png`: distribución de las visitas mensuales para las clases
-  ocasional (0) y recurrente (1). Permite comparar medianas y dispersión sin atribuir
-  causalidad.
+  ocasional (0) y recurrente (1). La mediana es 9 visitas para ocasionales y 15 para
+  recurrentes; las distribuciones se solapan, por lo que las visitas por sí solas no
+  separan perfectamente a los clientes. Esto no implica causalidad.
 
 ## Modelo
 
@@ -136,8 +139,9 @@ el CSV incluido.
   independiente.
 - **Registros de prueba plausibles:** se prueban `(15 visitas, ticket 250)` como
   ejemplo esperado de recurrente y `(5 visitas, ticket 60)` como ejemplo esperado
-  de ocasional. Los tickets están expresados en miles de pesos y los valores son
-  compatibles con el rango observado. Con la media de entrenamiento
+  de ocasional. Ambos están dentro de los rangos observados tras limpiar
+  (1–19 visitas y 12–299 miles de pesos por ticket); uno representa valores
+  relativamente altos y el otro valores más bajos. Con la media de entrenamiento
   `[10.775, 157.550]` y la desviación estándar `[5.3221, 90.7689]`, sus
   probabilidades calculadas fueron **0.971525** (clase 1) y **0.000846** (clase 0);
   ambas coinciden con lo esperado. El script realiza el escalado y muestra las
