@@ -124,7 +124,10 @@ el CSV incluido.
   En esta ejecución `w1 = 2.726407` (visitas mensuales) y
   `w2 = 2.618601` (ticket promedio) son positivos: al aumentar cualquiera de las
   entradas, manteniendo fija la otra, aumenta la probabilidad estimada de
-  recurrencia. Esto describe la asociación aprendida en estos datos, no causalidad.
+  recurrencia. Para una tienda de Cartago, la dirección de esta asociación es
+  razonable como hipótesis descriptiva: más visitas y un ticket mayor pueden
+  acompañar la recurrencia. Sin embargo, estos 80 registros no demuestran que el
+  patrón represente a toda Cartago ni que esas variables causen la recurrencia.
 - **Separación y errores:** la frontera es una recta en estas dos entradas. El script
   muestra cuántos clientes quedan al lado equivocado usando el umbral 0.5. Con
   pérdida final **0.229269**, exactitud de entrenamiento **0.9125 (91.25 %)** y
