@@ -1,0 +1,10 @@
+services:
+  parcial2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: parcial2_ia
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: ["sleep", "infinity"]
